@@ -5,13 +5,19 @@ LiquidCrystal lcd(rs, e, d4, d5, d6, d7);
 char ar[]="st392 is intelligent and champ" ; 
 void setup() {
   lcd.begin(16, 2);
-  for ( int i=0 ; i<16 ; i++)
-    lcd.print(ar[i]);
+//  for ( int i=0 ; i<26 ; i++)
+    lcd.print("hello world" );
     
 }
+int start=0;
 void loop() {
   lcd.setCursor(0, 1);
-  lcd.print(millis() / 1000);
+  for (int i=start; i<(16+start); i++ ) 
+  {    lcd.print(ar[i]);
+  }
+    delay(500);
+  start++; // check this variable 
+  
 }
 
 
