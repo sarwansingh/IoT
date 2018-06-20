@@ -1,0 +1,8 @@
+Ex. 
+four LEDs connected on 9,10,11,12
+patterns
+1. all on (delay)- all off (delay)
+2. even-on,odd-off (delay) - odd-on, even-off(delay) 
+3. sequence 1,2,3,4, - - 4,3,2,1
+4. consecutive two on - other off and vice versa
+5. binary no. representation
