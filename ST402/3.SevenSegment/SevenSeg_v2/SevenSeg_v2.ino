@@ -1,25 +1,35 @@
 int a=3,b=4,c=5,d=6,e=7,f=8,g=9 ; 
 int segment[]={3,4,5,6,7,8,9};
-int zero[] = {0,0,0,0,0,0,1};
-int one[] ={1,0,0,1,1,1,1} ;
-int two[] ={0,0,1,0,0,1,0} ; 
-int three[] = {0,0,0,0,1,1,0} ;
-int four[] = {1,0,0,1,1,0,0} ;
+int digits[][7] = {
+  {0,0,0,0,0,0,1},{1,0,0,1,1,1,1},{0,0,1,0,0,1,0},
+  {0,0,0,0,1,1,0},{1,0,0,1,1,0,0},{0,1,0,0,1,0,0}
+};
+//int zero[] = {0,0,0,0,0,0,1};
+//int one[] ={1,0,0,1,1,1,1} ;
+//int two[] ={0,0,1,0,0,1,0} ; 
+//int three[] = {0,0,0,0,1,1,0} ;
+//int four[] = {1,0,0,1,1,0,0} ;
 void setup() {
     for (int i=0 ; i<7;i++) pinMode(segment[i], OUTPUT);
 }
-
+void show(int j){
+  for (int i=0 ; i<7;i++)
+    digitalWrite(segment[i], digits[j][i]);
+}
 void loop() {
-    for (int i=0 ; i<7;i++) digitalWrite(segment[i], zero[i]);
-    delay(1000); 
-      for (int i=0 ; i<7;i++) digitalWrite(segment[i], one[i]);
-      delay(1000); 
-    for (int i=0 ; i<7;i++) digitalWrite(segment[i], two[i]);
-    delay(1000); 
-    for (int i=0 ; i<7;i++) digitalWrite(segment[i], three[i]);
-    delay(1000); 
-    for (int i=0 ; i<7;i++) digitalWrite(segment[i], four[i]);
-    delay(1000); 
+      for (int j=5 ; j>0;j--){
+          show(j-1);
+          delay(1000);     
+      }
+    
+//      for (int i=0 ; i<7;i++) digitalWrite(segment[i], one[i]);
+//      delay(1000); 
+//    for (int i=0 ; i<7;i++) digitalWrite(segment[i], two[i]);
+//    delay(1000); 
+//    for (int i=0 ; i<7;i++) digitalWrite(segment[i], three[i]);
+//    delay(1000); 
+//    for (int i=0 ; i<7;i++) digitalWrite(segment[i], four[i]);
+//    delay(1000); 
    
 }
 /*
