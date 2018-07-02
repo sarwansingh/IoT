@@ -20,4 +20,11 @@ void loop() {
   if (digitalRead(C1) ==  LOW) {Serial.println("4"); delay(300);}
   if (digitalRead(C2) ==  LOW) {Serial.println("5"); delay(300);}
   if (digitalRead(C3) ==  LOW) {Serial.println("6"); delay(300);} 
+  //////////// third row
+ digitalWrite(R1,HIGH);digitalWrite(R2,HIGH);
+  digitalWrite(R3,LOW);digitalWrite(R4,HIGH);
+  if (digitalRead(C1) ==  LOW) {Serial.println("7"); delay(300);}
+  if (digitalRead(C2) ==  LOW) {Serial.println("8"); delay(300);}
+  if (digitalRead(C3) ==  LOW) {Serial.println("9"); delay(300);} 
+  
 }
