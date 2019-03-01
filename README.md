@@ -8,3 +8,8 @@ The objective of this material is to gain knowledge on importance of **Internet 
 
 The reader's will learn to design IoT components which would allow them to innovate new designs and products. They will also learn the most innovative technology after the invention of Internet.  
 
+> Contents/Slides: 
+
+![Overview of IoT Ecosystem](./Slides/images/IoT_overview.png) learn to design IoT components which would allow them to innovate new designs and products. They will also learn the most innovative technology after the [IoT Overview Slide](./Slides/1.IoT_overview.pdf)
+
+![Understanding Basics of Arduino](./Slides/images/Arduino_overview.png) learn to design IoT components which would allow them to innovate new designs and products. They will also learn the most innovative technology after the [Arduino Basics Slide](./Slides/1a.Arduino_Basic.pdf)
