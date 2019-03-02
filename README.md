@@ -16,7 +16,7 @@ The examples undertaken/coded while demos in class are [available here](./ClassE
 - 6 Months Industrial Training Programmes [PJ120](./ClassExamples/PJ120) 
 
 
-> Contents/Slides: 
+> Contents/Slides:  &nbsp;&nbsp;&nbsp;  [Topicwise Slides](./Slides)
 
 [![Overview of IoT Ecosystem](./Slides/images/IoT_overview.png)](./Slides/1.IoT_overview.pdf) IoT has revolutionised the digital world, by connecting all the things together. This slide discusses the histroy and evolution of IoT ecosystem, the sensors and their usage in building the IoT application. The revenue forecast and IoT in building future of human civilization is also touched upon in the slide.   [IoT Overview Slide](./Slides/1.IoT_overview.pdf)
 
