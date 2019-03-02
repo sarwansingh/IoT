@@ -30,4 +30,4 @@ Video  : [complete YouTube Playlist](https://www.youtube.com/playlist?list=PLVFT
 
 [![Arduino-LED Interfacing](./Slides/images/LED_interfacing.png)](https://www.youtube.com/watch?v=oDDO2TMXj6w&index=4&list=PLVFTXXYBVkMv0QAqRUFJxYiXKw3l0SRX- "Interfacing LED") &nbsp; &nbsp; &nbsp;  &nbsp;    [![Arduino-Button Interfacing](./Slides/images/button_interfacing.png)](https://www.youtube.com/watch?v=oDDO2TMXj6w&index=4&list=PLVFTXXYBVkMv0QAqRUFJxYiXKw3l0SRX- "Interfacing Button")
 
-thanks
+*and the learning endeavour continues...*
