@@ -25,6 +25,8 @@ Video  :
 
 [![Understanding Basics of Arduino](./Slides/images/Arduino_overview.png)](./Slides/1a.Arduino_Basic.pdf)  Arduino is Open Source electronic prototyping platform. It is one of most favour platforms with easy to use hardware and software. Arduino family has many ready to use hardware prototyping boards and one the most versatile board is Uno popularly know as Arduino Uno.The slide show explains the basic Input/Output along with other hardware essentials. On the software front, slide discusses the essentials of hello world/blink LED program. [Arduino Basics Slide](./Slides/1a.Arduino_Basic.pdf)
 
+Video  : [complete YouTube Playlist](https://www.youtube.com/playlist?list=PLVFTXXYBVkMv0QAqRUFJxYiXKw3l0SRX-)
 
+[![Arduino-LED Interfacing](./Slides/images/LED_interfacing.png)](https://www.youtube.com/watch?v=oDDO2TMXj6w&index=4&list=PLVFTXXYBVkMv0QAqRUFJxYiXKw3l0SRX- "Interfacing LED") &nbsp; &nbsp; &nbsp;  &nbsp;    [![Arduino-Button Interfacing](./Slides/images/button_interfacing.png)](https://www.youtube.com/watch?v=oDDO2TMXj6w&index=4&list=PLVFTXXYBVkMv0QAqRUFJxYiXKw3l0SRX- "Interfacing Button")
 
 thanks
