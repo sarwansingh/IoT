@@ -1,0 +1,10 @@
+1. four LEDs connected on 10,6,9,11 . WAP to display 5 patterns across these 4 LEDs
+
+2. four LEDs connected on 10,6,9,11  and four buttons connected on 7,8,12,13 .
+    WAP to display :LED toggle using  respective buttons
+
+3.  WAP using two buttons as increment and decrement resp. Displaying LED_ON count increasing and/or decreasing. 
+
+4. Buzzer is connected across pin 4 . WAP to emulated beep music using buzzer. 
+
+5. integrate buzzer in program at s.no. 3
