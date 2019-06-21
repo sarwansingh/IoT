@@ -11,7 +11,7 @@ The reader's will learn to design IoT components which would allow them to innov
 > Class Example : 
 
 The examples undertaken/coded while demos in class are [available here](./ClassExamples/). 
-- 6 weeks summer training programs on IoT [ST390](./ClassExamples/ST390) ,[ST392](./ClassExamples/ST392) ,[ST402](./ClassExamples/ST402), [ST435-36](./ClassExamples/ST435-36) 
+- 6 weeks summer training programs on IoT [ST390](./ClassExamples/ST390) ,[ST392](./ClassExamples/ST392) ,[ST402](./ClassExamples/ST402), [ST435-36](./ClassExamples/ST435-36), [ST441](./ClassExamples/ST441) 
 - 5 day   [Workshop IoT](./ClassExamples/Workshop_IoT) 
 - 6 Months Industrial Training Programmes [PJ120](./ClassExamples/PJ120) 
 
