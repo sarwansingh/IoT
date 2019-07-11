@@ -70,7 +70,7 @@ void callback(char* topic, byte* payload, unsigned int length){
 
   if ((char)payload[0] == '0') {
     digitalWrite(ledPin, LOW);
-   // client.publish("Class/Light1", "0");
+    //client.publish("Class/Light1", "0");
     Serial.print("LED 1 LOW");
   }
   if ((char)payload[0] == '1') {
@@ -80,20 +80,20 @@ void callback(char* topic, byte* payload, unsigned int length){
   }
 }
 void loop() {
-//
-//  if ( digitalRead(buttonPin) ==LOW) {
-//      if (buttonState ==1){
-//         buttonState =0;
-//         client.publish("Class/Light1", "0");
-//         digitalWrite(ledPin, LOW);
-//      }
-//      else{
-//        buttonState =1;
-//         client.publish("Class/Light1", "1");
-//         digitalWrite(ledPin, HIGH);
-//      }
-//      while(digitalRead(buttonPin) ==LOW ) ;
-//  }
+
+  if ( digitalRead(buttonPin) ==LOW) {
+      if (buttonState ==1){
+         buttonState =0;
+         client.publish("Class/Light1", "0");
+         digitalWrite(ledPin, LOW);
+      }
+      else{
+        buttonState =1;
+         client.publish("Class/Light1", "1");
+         digitalWrite(ledPin, HIGH);
+      }
+      while(digitalRead(buttonPin) ==LOW ) ;
+  }
 
    if (!client.connected()) {
     reconnect();
