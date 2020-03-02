@@ -1,31 +1,49 @@
 #include <ESP8266WiFi.h>
-int ledPin=2;
+#include<EEPROM.h>
+ 
+const char* ssid = "simer";//type your ssid
+const char* password = "012345678";//type your password
+int value = LOW;
+int ledPin = 2; // GPIO2 of ESP8266
 WiFiServer server(80);
-
+ 
 void setup() {
-  pinMode(ledPin,OUTPUT); 
   Serial.begin(115200);
-  Serial.println();
-  Serial.print("Connecting to WiFi ");
+  EEPROM.begin(512);
+  delay(10);
   
-  WiFi.begin("simer" , "012345678");
-
+  pinMode(ledPin, OUTPUT);
+  //// read the EEPROM 
+  value = EEPROM.read(0);
+  digitalWrite(ledPin, value);
+   
+  // Connect to WiFi network
+  Serial.println();
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+   
+  WiFi.begin(ssid, password);
+   
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
   Serial.println("");
   Serial.println("WiFi connected");
-
+   
+  // Start the server
+  server.begin();
+  Serial.println("Server started");
+ 
   // Print the IP address
   Serial.print("Use this URL to connect: ");
   Serial.print("http://");
   Serial.print(WiFi.localIP());
   Serial.println("/");
-  server.begin();
-  Serial.println("Server started");
+    
 }
-
+ 
 void loop() {
   // Check if a client has connected
   WiFiClient client = server.available();
@@ -46,17 +64,25 @@ void loop() {
    
   // Match the request
  
-  int value = LOW;
+  
   if (request.indexOf("/LED=ON") != -1) {
     digitalWrite(ledPin, LOW);
+    EEPROM.write(0, 0);
+    EEPROM.commit();
     value = HIGH;
   } 
   if (request.indexOf("/LED=OFF") != -1){
     digitalWrite(ledPin, HIGH);
+    EEPROM.write(0, 1);
+    EEPROM.commit();
     value = LOW;
   }
  
-   // Return the response in form HTML page
+// Set ledPin according to the request
+//digitalWrite(ledPin, value);
+   
+ 
+  // Return the response
   client.println("HTTP/1.1 200 OK");
   client.println("Content-Type: text/html");
   client.println(""); //  do not forget this one
@@ -70,20 +96,16 @@ void loop() {
   } else {
     client.print("Off");
   }
-  client.println("<br><h1> Welcome to NIELIT </h1><hr><br>");
-   if (value == LOW){ 
-      client.println("Click <a href=\"/LED=ON\">here on</a> turn the LED ON<br>");
-      client.println("<img src=\"http://clipart-library.com/image_gallery2/Light-Bulb-PNG-File.png\" height=100 width=100>");
-   }else {
-      client.println("Click <a href=\"/LED=OFF\"> here Off</a> turn the LED OFF <br>");
-      // with image 
-      //client.println("Click <a href=\"/LED=OFF\"> <img src=\"http://getdrawings.com/img/light-bulb-silhouette-vector-11.png\" height=100 width=100 alt=\"OFF\"> here Off</a> turn the LED OFF <br>");
+  client.println("<br><h1> Welcome ST402 </h1><hr><br>");
+  if (value == LOW){ 
+      client.println("Click <a href=\"/LED=ON\">here</a> turn the LED ON<br>");
+  }else {
+      client.println("Click <a href=\"/LED=OFF\"><img src=\"http://getdrawings.com/img/light-bulb-silhouette-vector-11.png\" height=100 width=100 alt=\"OFF\"> </a> turn the LED OFF <br>");
   }
   client.println("</html>");
  
   delay(1);
   Serial.println("Client disonnected");
   Serial.println("");
-  
  
 }

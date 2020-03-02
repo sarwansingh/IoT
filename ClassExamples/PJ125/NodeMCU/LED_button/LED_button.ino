@@ -16,8 +16,7 @@ void loop() {
       if (buttonState ==1) buttonState =0;
       else buttonState =1;
       while(digitalRead(buttonPin) ==HIGH ) ;
-  }
-  
+  } 
 
   if (buttonState == 1) {
     digitalWrite(ledPin, HIGH);
