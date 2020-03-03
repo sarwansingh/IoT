@@ -9,10 +9,10 @@ void setup_wifi();
 void callback(char* topic, byte* payload, unsigned int length);
 void reconnect();
 
-const char* ssid = "Electronics";
-const char* password = "12345678";
+const char* ssid = "simer";
+const char* password = "012345678";
 
-const char* mqtt_server = "iot.eclipse.org";
+const char* mqtt_server = "mqtt.eclipse.org";
 int gpio2_pin = 2;
 
 WiFiClient espClient;
@@ -56,11 +56,11 @@ void callback(char* topic, byte* payload, unsigned int length) {
     Serial.print((char)payload[i]);
   }
   
-  if((char)payload[0] == 'o' && (char)payload[1] == 'n') { //on
+  if((char)payload[0] == '1') { //on
      digitalWrite(gpio2_pin, HIGH);
      Serial.print("pin high");
   }   
-  else if((char)payload[0] == 'o' && (char)payload[1] == 'f' && (char)payload[2] == 'f') //off
+  else if((char)payload[0] == '0' ) //off
   {  digitalWrite(gpio2_pin, LOW);
      Serial.print("pin low");
   }
@@ -72,12 +72,12 @@ void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("NIELITst404")) {
+    if (client.connect("NIELITPJ125")) {
       Serial.println("connected");
       // Once connected, publish an announcement...
-      client.publish("st404/light1", "on");
+      client.publish("Class/light1", "1");
       // ... and resubscribe
-      client.subscribe("st404/light1");
+      client.subscribe("Class/light1");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
