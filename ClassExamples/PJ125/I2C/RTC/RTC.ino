@@ -18,7 +18,7 @@ void setup () {
     while (1);
   } 
   // run the below line of code once , in order to adjust the Date and time 
- // rtc.adjust(DateTime(2020,02, 26, 11, 22,05));
+ rtc.adjust(DateTime(2020,02, 26, 11, 22,05));
   if (! rtc.isrunning()) {
     Serial.println("RTC is NOT running!"); 
   }
