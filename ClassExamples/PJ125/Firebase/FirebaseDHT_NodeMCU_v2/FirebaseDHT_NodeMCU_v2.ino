@@ -7,19 +7,12 @@
 #include  <ESP8266WiFi.h>
 
 // Set these to run example.
-#define FIREBASE_HOST "nodemcu-nielit125.firebaseio.com"
-#define FIREBASE_AUTH "2QVppV5F95FDPGTp39AlD29BUAQUlOk2tBTnopjn"
-#define WIFI_SSID     "demo123"
-#define WIFI_PASSWORD "12345678"
-
-//
 //#define FIREBASE_HOST "yyyyyyyyyyyy.firebaseio.com"
 //#define FIREBASE_AUTH "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 //#define WIFI_SSID     "ssssss"
 //#define WIFI_PASSWORD "pppppp"
 
 #define DHTPIN 14    // Data Pin of DHT 11 , for NodeMCU D5 GPIO no. is 14
-
 #define DHTTYPE DHT11   // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
 
