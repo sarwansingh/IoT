@@ -1,0 +1,20 @@
+int led1=13, led2=12, led3=11, led4=10 ;
+void setup()
+{
+  pinMode(led1, OUTPUT);pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);pinMode(led4, OUTPUT);
+}
+void blink(int wled, int times){
+  for (int x=0; x<times ; x++){
+    digitalWrite(wled, HIGH);  delay(1000);
+    digitalWrite(wled, LOW);  delay(1000);
+  }
+}
+
+void loop()
+{
+  blink(led1,1);
+  blink(led2 ,2 );
+  blink(led3 ,3 );
+  blink(led4 ,4 );
+}
