@@ -1,0 +1,38 @@
+int LEDs[ ] = {13,12,11,10,9} ; 
+int LEDcount =sizeof(LEDs)/sizeof(int) ; 
+void setup()
+{ pinMode(2, INPUT);  pinMode(3, INPUT);
+  for (int i=0; i<LEDcount ; i++)
+ 	 pinMode(LEDs[i], OUTPUT);
+}
+int count=0 ;
+void loop()
+{
+  if (digitalRead(2) == HIGH )
+  { if (count<5)count++; 
+   	while(digitalRead(2) == HIGH );
+  }
+  if (digitalRead(3) == HIGH )
+  { if (count>0)count--; 
+   	while(digitalRead(3) == HIGH );
+  }
+  if(count==0) digitalWrite(LEDs[0], LOW);
+  if (count==1){
+    digitalWrite(LEDs[0], HIGH);
+    digitalWrite(LEDs[1], LOW);
+  }
+  if (count==2){
+    digitalWrite(LEDs[1], HIGH);
+    digitalWrite(LEDs[2], LOW);
+  }
+  if (count==3){
+    digitalWrite(LEDs[2], HIGH);
+    digitalWrite(LEDs[3], LOW);
+  }
+  if (count==4){
+    digitalWrite(LEDs[3], HIGH);
+    digitalWrite(LEDs[4], LOW);
+  }
+  if (count==5)digitalWrite(LEDs[4], HIGH);
+   
+}
